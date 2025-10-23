@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <title>وبلاگ آیگین</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Vazir', sans-serif;
+      font-family: sans-serif;
       background-color: #fff0f5;
       color: #444;
       margin: 0;
@@ -43,11 +42,6 @@
       text-decoration: none;
       color: #fff;
       font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #ffe4e1;
     }
 
     section {
@@ -58,23 +52,7 @@
     .intro img {
       width: 140px;
       border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 20px;
-      transition: transform 0.5s ease;
-      transform-style: preserve-3d;
-    }
-
-    .intro img:hover {
-      transform: perspective(600px) rotateY(10deg) scale(0.95);
-    }
-
-    .shrink {
-      width: 80px !important;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      transition: all 0.5s ease;
-      z-index: 1000;
     }
 
     .posts {
@@ -89,26 +67,12 @@
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-      animation: fadeInUp 0.6s ease forwards;
-      opacity: 0;
-    }
-
-    article:hover {
-      transform: translateY(-5px);
     }
 
     article img {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.5s ease;
-      transform-style: preserve-3d;
-    }
-
-    article img:hover {
-      transform: perspective(600px) rotateY(8deg) scale(0.95);
     }
 
     article a {
@@ -117,22 +81,6 @@
       color: #ff69b4;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    article a:hover {
-      color: #d63384;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     footer {
@@ -141,7 +89,6 @@
       padding: 25px;
       color: #fff;
       margin-top: 40px;
-      border-top: 1px solid #ffe4e1;
     }
 
     footer ul {
@@ -158,16 +105,30 @@
     footer ul li a {
       color: #fff;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
 
-    footer ul li a:hover {
-      color: #ffe4e1;
+    /* فرم تماس */
+    #contact input,
+    #contact textarea,
+    #contact button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
     }
 
-    footer ul li a i {
-      margin-left: 8px;
-      color: #fff;
+    #contact button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #contact button:hover {
+      background-color: #d63384;
     }
   </style>
 </head>
@@ -226,27 +187,27 @@
       <a href="post5.html">ادامه مطلب</a>
     </article>
   </section>
-<section id="contact" style="max-width: 500px; margin: 80px auto; background: #fff0f5; padding: 30px; border-radius: 16px; box-shadow: 0 0 20px rgba(255, 105, 180, 0.2); font-family: 'Vazir', sans-serif;">
-  <h2 style="text-align: center; color: #d63384; margin-bottom: 20px;">📩 تماس با من</h2>
-  <form action="https://formsubmit.co/ai.g5.ghasemiaigin@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="نام شما" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid #ffc0cb; border-radius: 8px; font-size: 1rem;">
-    
-    <input type="email" name="email" placeholder="ایمیل شما" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid #ffc0cb; border-radius: 8px; font-size: 1rem;">
-    
-    <textarea name="message" placeholder="پیام شما" required style="width: 100%; padding: 12px; height: 120px; margin-bottom: 15px; border: 2px solid #ffc0cb; border-radius: 8px; font-size: 1rem;"></textarea>
 
-    <!-- تنظیمات اختیاری -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://aigin-dev.github.io/aigin-blog/thanks.html">
-
-    <button type="submit" style="width: 100%; background-color: #ff69b4; color: white; padding: 12px; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">
-      ارسال پیام 💖
-    </button>
-  </form>
-</section>
-
-  <section id="contact" style="max-width: 500px; margin: 80px auto; background: #fff0f5; padding: 30px; border-radius: 16px; box-shadow: 0 0 20px rgba(255, 105, 180, 0.2); font-family: 'Vazir', sans-serif;">
-    <h2 style="text-align: center; color: #d63384; margin-bottom: 20px;">📩 تماس با من</h2>
+  <section id="contact">
+    <h2>📩 تماس با من</h2>
     <form action="https://formsubmit.co/ai.g5.ghasemiaigin@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="نام شما" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid #ffc0cb; border-radius: 8px; font-size: 1rem;">
-      [43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/aurdau2/ProudKittens/tree/99e982d39e8687d29cd221bd06303c833ac22870/MyGarage.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054&citationId=1 "github.com")<input type="email" name="email" placeholder="ایمیل شما" required style="width: 100%; padding: 12px; margin-bottom: 15px; border
+      <input type="text" name="name" placeholder="نام شما" required>
+      <input type="email" name="email" placeholder="ایمیل شما" required>
+      <textarea name="message" placeholder="پیام شما" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://aigin-dev.github.io/aigin-blog/thanks.html">
+      <button type="submit">ارسال پیام</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 وبلاگ آیگین</p>
+    <ul>
+      <li><a href="#home">خانه</a></li>
+      <li><a href="#about">درباره من</a></li>
+      <li><a href="#contact">تماس با ما</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

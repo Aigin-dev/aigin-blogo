@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Vazir', sans-serif;
       background-color: #fff0f5;
       color: #444;
       margin: 0;
@@ -42,6 +42,11 @@
       text-decoration: none;
       color: #fff;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe4e1;
     }
 
     section {
@@ -52,7 +57,14 @@
     .intro img {
       width: 140px;
       border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 20px;
+      transition: transform 0.5s ease;
+      transform-style: preserve-3d;
+    }
+
+    .intro img:hover {
+      transform: perspective(600px) rotateY(10deg) scale(0.95);
     }
 
     .posts {
@@ -67,12 +79,26 @@
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    article:hover {
+      transform: translateY(-5px);
     }
 
     article img {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.5s ease;
+      transform-style: preserve-3d;
+    }
+
+    article img:hover {
+      transform: perspective(600px) rotateY(8deg) scale(0.95);
     }
 
     article a {
@@ -81,6 +107,86 @@
       color: #ff69b4;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    article a:hover {
+      color: #d63384;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* فرم تماس */
+    .contact-box {
+      max-width: 500px;
+      width: 90%;
+      margin: 80px auto;
+      padding: 30px;
+      background: linear-gradient(to bottom right, #ffe4e1, #ffc0cb);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+      text-align: center;
+      animation: fadeIn 1.2s ease forwards;
+      box-sizing: border-box;
+    }
+
+    .contact-box h2 {
+      color: #d63384;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      animation: bounce 1.5s ease;
+    }
+
+    .contact-box input,
+    .contact-box textarea,
+    .contact-box button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 2px solid #ffc0cb;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-box input:focus,
+    .contact-box textarea:focus {
+      border-color: #ff69b4;
+      outline: none;
+    }
+
+    .contact-box button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-box button:hover {
+      background-color: #d63384;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
 
     footer {
@@ -89,6 +195,7 @@
       padding: 25px;
       color: #fff;
       margin-top: 40px;
+      border-top: 1px solid #ffe4e1;
     }
 
     footer ul {
@@ -105,36 +212,17 @@
     footer ul li a {
       color: #fff;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    /* فرم تماس */
-    #contact input,
-    #contact textarea,
-    #contact button {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-
-    #contact button {
-      background-color: #ff69b4;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    #contact button:hover {
-      background-color: #d63384;
+    footer ul li a:hover {
+      color: #ffe4e1;
     }
   </style>
 </head>
 <body>
 
-  <header>
+<header>
     <h1>وبلاگ آیگین</h1>
     <nav>
       <ul>
@@ -188,7 +276,7 @@
     </article>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="contact-box">
     <h2>📩 تماس با من</h2>
     <form action="https://formsubmit.co/ai.g5.ghasemiaigin@gmail.com" method="POST">
       <input type="text" name="name" placeholder="نام شما" required>
@@ -196,7 +284,7 @@
       <textarea name="message" placeholder="پیام شما" required></textarea>
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://aigin-dev.github.io/aigin-blog/thanks.html">
-      <button type="submit">ارسال پیام</button>
+      <button type="submit">ارسال پیام 💖</button>
     </form>
   </section>
 

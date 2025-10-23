@@ -410,7 +410,7 @@ footer ul li {
     </ul>
   </footer>
 
-<<script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const msg = document.getElementById("thankYouMessage");
@@ -429,11 +429,9 @@ footer ul li {
       }).then(response => {
         if (response.ok) {
           msg.style.display = "block";
-          msg.classList.add("fade-in");
 
           setTimeout(() => {
             msg.style.display = "none";
-            msg.classList.remove("fade-in");
             form.reset();
           }, 5000);
         } else {

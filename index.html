@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>وبلاگ آیگین</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: 'Vazir', sans-serif;
@@ -116,10 +115,17 @@
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
+    /* فرم تماس */
     .contact-box {
       max-width: 500px;
       width: 90%;
@@ -183,28 +189,6 @@
       100% { transform: translateY(0); }
     }
 
-    .social-bar {
-      margin: 40px auto;
-      text-align: center;
-      background-color: #ffe4e1;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
-    }
-
-    .social-bar a {
-      font-size: 28px;
-      color: #ff69b4;
-      margin: 0 15px;
-      transition: color 0.3s ease, transform 0.3s ease;
-      text-decoration: none;
-    }
-
-    .social-bar a:hover {
-      color: #d63384;
-      transform: scale(1.2);
-    }
-
     footer {
       background-color: #ffc0cb;
       text-align: center;
@@ -237,7 +221,18 @@
   </style>
 </head>
 <body>
-<section id="home" class="intro">
+<header>
+    <h1>وبلاگ آیگین</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">خانه</a></li>
+        <li><a href="#about">درباره من</a></li>
+        <li><a href="#contact">تماس با ما</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="intro">
     <img src="aigin.jpeg" alt="تصویر آیگین">
     <h2>سلام! من آیگین هستم</h2>
     <p>طراح وب با سبک مینیمال و دخترونه، عاشق پروژه‌های خلاقانه و طراحی فروشگاه‌های آنلاین با رنگ‌های لطیف و شخصی.</p>
@@ -245,12 +240,39 @@
 
   <section class="posts">
     <article>
-      <img src="minimal-design.jpg" alt="طراحی مینیمال">
-      <h3>5 نکته برای طراحی مینیمال</h3>
-      <p>سادگی، فضای سفید، تایپوگرافی تمیز، رنگ‌های محدود، و تمرکز روی محتوا.</p>
-      <a href="#">ادامه مطلب</a>
+      <h2>۵ نکته برای طراحی مینیمال</h2>
+      <img src="minimal-tips.jpeg" alt="تصویر دختر طراح مینیمال">
+      <p>چطور با سادگی، رنگ‌های لطیف و تایپوگرافی مناسب، یه طراحی مینیمال و حرفه‌ای بسازیم؟</p>
+      <a href="post1.html">ادامه مطلب</a>
     </article>
-    <!-- پست‌های بیشتر -->
+
+    <article>
+      <h2>چطور برند شخصی بسازیم؟</h2>
+      <img src="brand-boy.jpeg" alt="تصویر پسر برند‌ساز">
+      <p>با شناخت خودت، انتخاب سبک بصری و تولید محتوا، برند شخصی خودتو بساز و تقویت کن.</p>
+      <a href="post2.html">ادامه مطلب</a>
+    </article>
+
+    <article>
+      <h2>کارآموز بودن؛ فراز و نشیب‌ها</h2>
+      <img src="internship-journey.jpeg" alt="تصویر تجربه کارآموزی">
+      <p>از هیجان شروع تا چالش‌های واقعی، تجربه کارآموزی چه چیزهایی به ما یاد می‌ده؟</p>
+      <a href="post3.html">ادامه مطلب</a>
+    </article>
+
+    <article>
+      <h2>هدف‌گذاری در مسیر یادگیری</h2>
+      <img src="learning-goals.jpeg" alt="تصویر هدف‌گذاری آموزشی">
+      <p>چطور با هدف‌گذاری خلاقانه، مسیر یادگیری طراحی و برنامه‌نویسی رو روشن‌تر کنیم؟</p>
+      <a href="post4.html">ادامه مطلب</a>
+    </article>
+
+    <article>
+      <h2>چیزهایی که من بلدم</h2>
+      <img src="skills-aigin.jpeg" alt="تصویر مهارت‌های من">
+      <p>از طراحی وب تا حل مسئله‌های روزمره، اینا چیزهایی‌ان که من بلدم و باهاشون رشد می‌کنم.</p>
+      <a href="post5.html">ادامه مطلب</a>
+    </article>
   </section>
 
   <section id="contact" class="contact-box">
@@ -265,19 +287,6 @@
     </form>
   </section>
 
-  <!-- ✅ کادر آیکن‌های شبکه اجتماعی -->
-  <div class="social-bar">
-    <a href="https://instagram.com/aigin.952" target="_blank" title="اینستاگرام">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://t.me/aigin07" target="_blank" title="تلگرام">
-      <i class="fab fa-telegram"></i>
-    </a>
-    <a href="https://github.com/aigin-dev" target="_blank" title="گیت‌هاب">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
-
   <footer>
     <p>© 2025 وبلاگ آیگین</p>
     <ul>
@@ -286,5 +295,6 @@
       <li><a href="#contact">تماس با ما</a></li>
     </ul>
   </footer>
+
 </body>
 </html>

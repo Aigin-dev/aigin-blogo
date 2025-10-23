@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta charset="UTF-8">
+
   <title>وبلاگ آیگین</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+
 .social-bar {
   margin: 40px auto;
   text-align: center;
@@ -210,18 +213,41 @@
       50%  { transform: translateY(-10px); }
       100% { transform: translateY(0); }
     }
-<!-- کادر آیکن‌های شبکه اجتماعی -->
-<div class="social-bar">
-  <a href="https://instagram.com/aigin.952" target="_blank" title="اینستاگرام">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://t.me/aigin07" target="_blank" title="تلگرام">
-    <i class="fab fa-telegram"></i>
-  </a>
-  <a href="https://github.com/aigin-dev" target="_blank" title="گیت‌هاب">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
+<section id="contact" class="contact-box">
+    <h2>📩 تماس با من</h2>
+    <form action="https://formsubmit.co/ai.g5.ghasemiaigin@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="نام شما" required>
+      <input type="email" name="email" placeholder="ایمیل شما" required>
+      <textarea name="message" placeholder="پیام شما" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://aigin-dev.github.io/aigin-blog/thanks.html">
+      <button type="submit">ارسال پیام 💖</button>
+    </form>
+  </section>
+
+  <!-- ✅ کادر آیکن‌های شبکه اجتماعی -->
+  <div class="social-bar">
+    <a href="https://instagram.com/aigin.952" target="_blank" title="اینستاگرام">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://t.me/aigin07" target="_blank" title="تلگرام">
+      <i class="fab fa-telegram"></i>
+    </a>
+    <a href="https://github.com/aigin-dev" target="_blank" title="گیت‌هاب">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2025 وبلاگ آیگین</p>
+    <ul>
+      <li><a href="#home">خانه</a></li>
+      <li><a href="#about">درباره من</a></li>
+      <li><a href="#contact">تماس با ما</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
 
     footer {
       background-color: #ffc0cb;

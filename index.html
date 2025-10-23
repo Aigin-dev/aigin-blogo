@@ -128,63 +128,6 @@
         transform: translateY(0);
       }
     }
-
-    footer {
-      background-color: #ffc0cb;
-      text-align: center;
-      padding: 25px;
-      color: #fff;
-      margin-top: 40px;
-      border-top: 1px solid #ffe4e1;
-    }
-
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    footer ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    footer ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    footer ul li a:hover {
-      color: #ffe4e1;
-    }
-
-    footer ul li a i {
-      margin-left: 8px;
-      color: #fff;
-    }
-
-    input, textarea, button {
-      display: block;
-      width: 80%;
-      margin: 10px auto;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
-
-    button {
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #d63384;
-    }
   </style>
 </head>
 <body>
@@ -243,10 +186,57 @@
     </article>
   </section>
 
-  <section id="about" class="about">
+<section id="about" class="about">
     <h2>درباره من</h2>
     <p>دانش‌آموز پایه دوازدهم با تخصص در شبکه و نرم‌افزار، عاشق طراحی وب با سبک مینیمال و دخترونه.</p>
     <p>علاقه‌مند به برندینگ شخصی، طراحی فروشگاه آنلاین، و ترکیب زیبایی‌شناسی با عملکرد فنی.</p>
   </section>
 
-  [43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/aurdau2/ProudKittens/tree/99e982d39e8687d29cd221bd06303c833ac22870/MyGarage.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054&citationId=1 "github.com")<section id="contact" class="contact
+  <section id="contact" class="contact-form">
+    <h2>تماس با من</h2>
+    <form>
+      <input type="text" placeholder="نام شما" required>
+      <input type="email" placeholder="ایمیل شما" required>
+      <textarea placeholder="پیام شما" required></textarea>
+      <button type="submit">ارسال پیام</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>ساخته شده با ❤️ توسط آیگین</p>
+    <ul>
+      <li>
+        <a href="mailto:ai.g5.ghasemiaigin@gmail.com">
+          <i class="fas fa-envelope"></i> ایمیل من
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/ay_gh07" target="_blank">
+          <i class="fab fa-instagram"></i> اینستاگرام من
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <script>
+    const profileImg = document.querySelector('.intro img');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        profileImg.classList.add('shrink');
+      } else {
+        profileImg.classList.remove('shrink');
+      }
+    });
+
+    // فعال‌سازی انیمیشن مقالات بعد از لود
+    window.addEventListener('load', () => {
+      document.querySelectorAll('article').forEach((el, i) => {
+        setTimeout(() => {
+          el.style.opacity = '1';
+        }, i * 150);
+      });
+    });
+  </script>
+
+</body>
+</html>
